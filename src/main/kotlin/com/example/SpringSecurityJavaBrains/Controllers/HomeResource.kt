@@ -7,6 +7,16 @@ import org.springframework.web.bind.annotation.RestController
 class HomeResource {
     @GetMapping("/")
     fun home():String{
-        return "Welcome Home"
+        return "Welcome Home";
+    }
+
+    @GetMapping("/user")
+    fun user():String{
+        return "Welcome user";
+    }
+
+    @GetMapping("/admin")
+    fun admin():String{
+        return "Welcome admin";
     }
 }
