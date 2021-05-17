@@ -19,6 +19,8 @@ class SecurityConfigurtion:WebSecurityConfigurerAdapter() {
                ?.antMatchers("/admin")?.hasRole("ADMIN")
                ?.antMatchers("/user")?.hasAnyRole("ADMIN","USER")
                ?.antMatchers("/")?.permitAll()
+               ?.and()
+               ?.formLogin()
     }
     override fun configure(auth: AuthenticationManagerBuilder?) {
       auth?.inMemoryAuthentication()
